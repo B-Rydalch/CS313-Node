@@ -1,0 +1,5 @@
+{
+    "shipping-method":"default",
+    "weight": "10", 
+    "container-type":"package"
+}
