@@ -1,7 +1,5 @@
-console.log("initializing calculate rate")
 
 function calculateRate(mailType, weight) {
-    console.log("calling calculate rate")
 
     let price = 0; 
     let totalPrice = 0;
@@ -32,8 +30,20 @@ function calculateRate(mailType, weight) {
         default:
             totalPrice = -1;
     }
+    console.log("Return calculate rate")
+
     return totalPrice
 }
 
-module.exports.calculateRate = calculateRate;
-document.getElementById("totalPrice").innerHTML = window.calculateRate(data.shipping,data.weight ); 
+function postalServices (req, res) {
+    console.log("calling postal Services")
+    console.log
+    let mailType = req.body.shipping;
+    let weight = req.body.weight;
+    let total = calculateRate(mailType, weight);
+    res.render('pages/postal.ejs', {data:req.body, total:total})
+}
+
+module.exports = {
+    postalServices
+}
