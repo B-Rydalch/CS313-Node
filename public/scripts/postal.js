@@ -36,3 +36,4 @@ function calculateRate(mailType, weight) {
 }
 
 module.exports.calculateRate = calculateRate;
+document.getElementById("totalPrice").innerHTML = window.calculateRate(data.shipping,data.weight ); 

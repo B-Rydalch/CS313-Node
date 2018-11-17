@@ -4,6 +4,7 @@
   <% include ../partials/header.ejs %>
   <base href="/">
   <link type="text/css" rel="stylesheet" href="../stylesheets/postal.css"> 
+  <script type="text/javascript" src="/js/frontend.js"></script>
 </head>
 <body>
     <% include ../partials/nav.ejs %>
@@ -26,7 +27,7 @@
           <td><%= data.shipping %></td>
           <td><%= data.weight %> oz</td>       
           <td><%= data.package %></td>
-          <td><%= calculateRate.calculateRate(data.shipping, data.weight) %></td>
+          <td id="totalPrice"></td>
         </tr>
       </tbody>
     </table>
