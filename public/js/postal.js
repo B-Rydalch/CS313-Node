@@ -11,19 +11,19 @@ function calculateRate(mailType, weight) {
             totalPrice = price * totalWeight;
             break;
         case "priority":
-            price = 24.70;
+            price = 6.7;
             totalPrice = price * totalWeight;
             break;
         case "first-class-mail":
-            price = 24.70;
+            price = 1.10;
             totalPrice = price * totalWeight;
             break; 
         case "first-class-package":
-            price = 24.70;
+            price = 3.5;
             totalPrice = price * totalWeight;
             break;  
         case "retail":
-            price = 24.70;
+            price = 0.178;
             totalPrice = price * totalWeight;
             break; 
 
