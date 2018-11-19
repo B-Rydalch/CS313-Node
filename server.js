@@ -1,4 +1,3 @@
-const cool = require('cool-ascii-faces')
 const bodyParser = require('body-parser')
 const express = require('express')
 const path = require('path')
@@ -17,5 +16,4 @@ express()
         //  (req, res) =>console.log(req.body),
         //(req, res) => res.render('pages/postal.ejs', {data:req.body})
         (req, res) => postOffice.postalServices(res,req))
-  .get('/cool', (req, res) => res.send(cool()))
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
