@@ -14,6 +14,6 @@ express()
   .get('/home', (req, res) => res.render('pages/index'))
   .post('/getRate', urlencodedParser,
         //  (req, res) =>console.log(req.body),
-        //(req, res) => res.render('pages/postal.ejs', {data:req.body})
-        (req, res) => postOffice.postalServices(res,req))
+        (req, res) => res.render('pages/postal.ejs', {data:req.body}))
+      //   (req, res) => postOffice.postalServices(res,req))
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
